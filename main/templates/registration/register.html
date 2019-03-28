@@ -1,0 +1,22 @@
+{% load static %}
+
+<head>
+
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "{% static 'button.css' %}">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <button class="button" style="vertical-align:middle"><span>SIGN UP</span></button>
+</form>
+<br>
+If you already have an account <a href="{% url 'login' %}" target="blank"><strong>login</strong></a> instead.
+</div>
+</body>
